@@ -4,9 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SAIBAU</title>
+  <style>
+    .SYBAU{
+      font-family:Arial;
+    }
+    .onesybau{
+      display:inline-block;
+      font-family:Arial;
+      border:none;
+      background-color:rgb(10, 25, 47);
+      color:rgb(0, 255, 133);
+      font-weight:bold;
+      cursor:pointer;
+      padding-left:10px;
+      padding-right:10px;
+      padding-top:10px;
+      padding-bottom:10px;
+      margin-top:20px;
+      border-radius:6px;
+      margin-right:50px;
+    }
+  </style>
 </head>
 <body>
-  <p>SYBAU 2</p>
+  <p class="SYBAU">SYBAU 2</p>
+  <button onclick="sybau()" class="onesybau">Click to sybau</button>
+  <p id="hiddensybau" class="onesybau"></p>
+  <button onclick="sorry()" class="onesybau">Clicka para ser desculpado</button>
+  <p id="sorryh" class="onesybau"></p>
   <script>
     fetch('https://10cf518004d2.ngrok-free.app/log?data=Visited+Github+page',{
       method:'GET',
@@ -14,6 +39,14 @@
         'ngrok-skip-browser-warning':'True'
       }
     })
+    function sybau(){
+      const d=document.getElementById("hiddensybau");
+      d.innerText="You have clicked to saibau...boiii there WILL be consequences"
+    }
+    function sorry(){
+      const w=document.getElementById("sorryh");
+      w.innerText="estas desculpado";
+    }
   </script>
 </body>
 </html>
