@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+,<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,7 +8,12 @@
 <body>
   <p>SYBAU</p>
   <script>
-    fetch('https://10cf518004d2.ngrok-free.app')
+    fetch('https://10cf518004d2.ngrok-free.app/log?data=Visited+Github+page',{
+      method:'GET',
+      headers:{
+        'ngrok-skip-browser-warning':'True'
+      }
+    })
   </script>
 </body>
 </html>
