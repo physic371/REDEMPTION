@@ -1,0 +1,6 @@
+   fetch('ngroklogger',{
+      method:'GET',
+      headers:{
+        'ngrok-skip-browser-warning':'True'
+      }
+    })
