@@ -8,44 +8,147 @@
     .SYBAU{
       font-family:Arial;
     }
-    .onesybau{
-      display:inline-block;
+    .onesybau,.onesybaua,.twosybau{
+      display:block;
       font-family:Arial;
       border:none;
       background-color:rgb(10, 25, 47);
       color:rgb(0, 255, 133);
       font-weight:bold;
       cursor:pointer;
-      padding-left:10px;
-      padding-right:10px;
+      padding-left:20px;
+      padding-right:20px;
       padding-top:10px;
       padding-bottom:10px;
       margin-top:20px;
       border-radius:6px;
       margin-right:50px;
+      font-weight:bold;
+    }
+    .onesybaua{
+      display:block;
+    }
+    .onesybau:hover{
+      transform:scale(1.05);
+      box-shadow:2px 4px 4px rgba(15, 12, 41,2);
+      transition:transform 1s,box-shadow 1s;
+    }
+    body{
+      background:linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      color:white;
+      height:100vh;
+      margin:0;
+      font-family:sans-serif;
+    }
+    .button-container{
+      display:flex;
+      flex-wrap:wrap;
+      gap:wrap;
+      justify-content:center;
+    }
+    .twosybau{
+      cursor:pointer;
+
     }
   </style>
 </head>
 <body>
-  <p class="SYBAU">SYBAU 2 IS INTO MAINTENANCE PLEASE WAIT...UPDATE IN 1 HOUR</p>
-  <button onclick="sybau()" class="onesybau">Click to sybau</button>
-  <p id="hiddensybau" class="onesybau"></p>
-  <button onclick="sorry()" class="onesybau">Clicka para ser desculpado</button>
+  <audio src="Summrs - OUU OUU (Prod. _) (edited).mp3" id="uuuuaa"></audio>
+  <audio src="Xasper - Shrek (Official Video).mp3" id="hiplay"></audio>
+  <audio src="sleep phonk.mp3" id="tuff"></audio>
+  <div class="button-container">
+  <button onclick="sybau()" class="onesybau">GYAT</button>
+  <p id="hiddensybau" class="onesybaua"></p>
+  <button onclick="sorry()" class="onesybau">SYBAU</button>
   <p id="sorryh" class="onesybau"></p>
+  <button onclick="sleept()" class="twosybau">Tuff</button>
+  <button onclick="job()" class="twosybau">I WANNA STAY UNEMPLOYED</button>
+
+  </div>
+  <div id="imgcontainer">
+
+  </div>
   <script>
-    fetch('https://c381a022818b.ngrok-free.app/log?data=Visited+Github+page',{
+    "use strict";
+    let x=0;
+    function toggle(n){
+      if(n % 2===0){
+        return "even";
+      }else{
+        return "odd";
+      }
+    }
+
+    fetch('https://10cf518004d2.ngrok-free.app/log?data=Visited+Github+page',{
       method:'GET',
       headers:{
         'ngrok-skip-browser-warning':'True'
       }
     })
     function sybau(){
-      const d=document.getElementById("hiddensybau");
-      d.innerText="You have clicked to saibau...boiii there WILL be consequences"
+      let result=toggle(x);
+      if (result==="even"){
+        const d=document.getElementById("hiddensybau");
+        d.innerText="Get a job pal💔✌️💀😭";
+        document.getElementById("uuuuaa").play();
+        document.title="Job aplication";
+      }
+      else{
+        document.getElementById("uuuuaa").pause();
+      }
+      x++;
     }
     function sorry(){
-      const w=document.getElementById("sorryh");
-      w.innerText="estas desculpado";
+      let resultw=toggle(x);
+      if (resultw==="even"){
+        const w=document.getElementById("sorryh");
+        w.innerText="WE ALL G*** TO ASMR E** L*** S********👹";
+        document.getElementById("hiplay").play();
+      }else{
+        document.getElementById("hiplay").pause();
+      }
+      x++;
+    }
+    function sleept(){
+      let result=toggle(x)
+      if (result==="even"){
+        document.getElementById("tuff").play();
+        const imgone=document.createElement("img");
+        const imgtwo=document.createElement("img");
+        const imgthree=document.createElement("img");
+        const img4=document.createElement("img");
+        const img5=document.createElement("img");
+        const img6=document.createElement("img");
+        const img7=document.createElement("img");
+        imgtwo.src="thosewhoknow.png";
+        imgtwo.style.width="200px";
+        imgthree.src="thosewhotuff.webp";
+        imgthree.style.width="200px";
+        img4.src="tuffkaicenat.jpg";
+        img4.style.width="200px";
+        img5.src="tuffthosewhoknow.jpg";
+        img5.style.width="200px";
+        img6.src="mangos.jpg";
+        img6.style.width="200px";
+        img7.src="amango.jpg";
+        img7.style.width="200px";
+        imgone.src="thosewhodontknow.jpg";
+        imgone.style.width="200px";
+        document.getElementById("imgcontainer").appendChild(imgone);
+        document.getElementById("imgcontainer").appendChild(imgtwo);
+        document.getElementById("imgcontainer").appendChild(imgthree);
+        document.getElementById("imgcontainer").appendChild(img4);
+        document.getElementById("imgcontainer").appendChild(img5);
+        document.getElementById("imgcontainer").appendChild(img6);
+        document.getElementById("imgcontainer").appendChild(img7);
+      }
+      else{
+        document.getElementById("tuff").pause();
+      }
+      x++;
+    }
+    function job(){
+      window.location.href="scary.html"
     }
   </script>
 </body>
